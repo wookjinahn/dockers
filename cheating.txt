@@ -1,0 +1,8 @@
+make image
+sudo docker build -t noetic .
+
+remove images
+sudo docker rmi $(docker images -q)
+
+remove containers
+sudo docker rm -f $(sudo docker ps -aq)
