@@ -1,8 +1,17 @@
 - make image
-sudo docker build -t noetic .
+./build.sh
 
-- remove images
-sudo docker rmi $(docker images -q)
+- remove image
+./build.sh -r
 
-- remove containers
+- run/exec container
+./run.sh
+
+- remove container
+./run.sh -r
+
+- remove all containers
 sudo docker rm -f $(sudo docker ps -aq)
+
+- show containers
+sudo docker ps -aq

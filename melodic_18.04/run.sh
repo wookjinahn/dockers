@@ -5,7 +5,7 @@ COLOR_GREEN="\033[1;32m"
 COLOR_YELLOW="\033[1;33m"
 COLOR_END="\033[0m"
 
-CONTAINER_NAME="noetic"
+CONTAINER_NAME="melodic"
 
 default()
 {
@@ -13,7 +13,7 @@ default()
     echo
     echo
     echo -e "$COLOR_YELLOW ----------------------- $COLOR_END"
-    echo -e "$COLOR_YELLOW ||    exec noetic    || $COLOR_END"
+    echo -e "$COLOR_YELLOW ||    exec $CONTAINER_NAME    || $COLOR_END"
     echo -e "$COLOR_YELLOW ----------------------- $COLOR_END"
     echo
     echo
@@ -25,7 +25,7 @@ default()
   echo
   echo
   echo -e "$COLOR_GREEN ------------------------ $COLOR_END"
-  echo -e "$COLOR_GREEN ||  first run noetic  || $COLOR_END"
+  echo -e "$COLOR_GREEN ||  first run $CONTAINER_NAME  || $COLOR_END"
   echo -e "$COLOR_GREEN ------------------------ $COLOR_END"
   echo
   echo
@@ -45,7 +45,7 @@ default()
     --volume=/dev:/dev \
     --volume=/dev/bus/usb:/dev/bus/usb \
     --volume=./files:/files \
-     noetic \
+     melodic \
      bash
 }
 
@@ -54,7 +54,7 @@ remove()
   echo
   echo
   echo -e "$COLOR_RED ----------------------- $COLOR_END"
-  echo -e "$COLOR_RED ||   remove noetic   || $COLOR_END"
+  echo -e "$COLOR_RED ||   remove $CONTAINER_NAME   || $COLOR_END"
   echo -e "$COLOR_RED ----------------------- $COLOR_END"
   echo
   echo
