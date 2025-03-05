@@ -8,6 +8,7 @@ SHELL ["/bin/bash", "-c"]
 RUN apt-get update && apt-get upgrade -y \
  && apt-get install -y \
     build-essential \
+    gdb \
     git \
     wget \
     curl \
