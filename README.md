@@ -1,5 +1,12 @@
 # Cheat sheet
 
+### before run
+```bash
+sudo usermod -aG docker $USER
+newgrp docker
+xhost +local:root
+```
+
 ### make image using Dockerfile  
 ```bash
 ./build.sh
