@@ -5,28 +5,33 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 SHELL ["/bin/bash", "-c"]
 
-RUN apt-get update && apt-get upgrade -y \
- && apt-get install -y \
-    build-essential \
-    git \
-    wget \
-    curl \
-    cmake \
-    gedit \
-    software-properties-common \
-    ros-melodic-rviz \
-    ros-melodic-rqt \
-    ros-melodic-rqt-common-plugins \
-    python3-wstool \
-    python3-catkin-tools \
-    ros-melodic-topic-tools \
-    ros-melodic-cmake-modules \
+RUN apt-get update && apt-get upgrade -y \ 
+ && apt-get install -y \ 
+    build-essential \ 
+    gdb \
+    git \ 
+    wget \ 
+    curl \ 
+    cmake \ 
+    gedit \ 
+    software-properties-common \ 
+    ros-melodic-rviz \ 
+    ros-melodic-rqt \ 
+    ros-melodic-rqt-common-plugins \ 
+    python3-wstool \ 
+    python3-catkin-tools \ 
+    ros-melodic-topic-tools \ 
+    ros-melodic-cmake-modules \ 
     protobuf-compiler \ 
-    autoconf \
+    autoconf \ 
     rsync \ 
-    libtool \
-    ros-melodic-librealsense2* \
-    ros-melodic-realsense2-* \
+    libtool \ 
+    ros-melodic-librealsense2* \ 
+    ros-melodic-realsense2-* \ 
+    mesa-utils \
+    libgl1-mesa-glx \
+    libgl1-mesa-dri \
+    x11-apps \
  && rm -rf /var/lib/apt/lists/*
 
 ENV WORKSPACE=/catkin_ws/src
