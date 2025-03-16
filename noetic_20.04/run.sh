@@ -33,6 +33,8 @@ default()
   xhost +local:root
   docker run -it \
     --name="$CONTAINER_NAME" \
+    --env ROS_MASTER_URI=http://$CONTAINER_NAME:11311 \
+    --env ROS_IP=$CONTAINER_NAME \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
