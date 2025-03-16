@@ -1,7 +1,8 @@
 # Cheat sheet
 
-### before run
+### before start
 ```bash
+sudo chmod 666 /var/run/docker.sock 
 sudo usermod -aG docker $USER
 newgrp docker
 xhost +local:root
