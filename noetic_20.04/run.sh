@@ -43,6 +43,8 @@ default()
     --volume=/dev:/dev \
     --volume=/dev/bus/usb:/dev/bus/usb \
     --volume=/home/$USER/Desktop/Codes/dockers-workspace/$CONTAINER_NAME:/workspace \
+    --env ROS_MASTER_URI=http://127.0.0.1:11311 \
+    --env ROS_HOSTNAME=127.0.0.1 \
     $CONTAINER_NAME \
     bash
 }
